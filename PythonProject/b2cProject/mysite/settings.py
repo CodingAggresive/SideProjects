@@ -25,8 +25,8 @@ SECRET_KEY = '_!(^&@q2uku=&s^z!5j@tt!=2x=(9253y(e8argras=6djj=tt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+#ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [
@@ -103,8 +104,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'zh-cn'
+LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'zh-cn'
 
 #TIME_ZONE = 'UTC'
 TIME_ZONE = 'America/Chicago'
