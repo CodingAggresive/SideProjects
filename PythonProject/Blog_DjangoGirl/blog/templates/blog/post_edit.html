@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <h2>New Post</h2>
+    <!--HTML form tag. method="Post"-->
+    <!--after the opening <form ...> tag we need to add {%25 csrf_token %25}. This is very important, 
+        since it makes your forms secure! If you forget about this bit, Django will complain when you try to save the form-->
+    <form method="Post" class="post-form">{% csrf_token %}
+        <!--We have to display the form. We can do that with (for example) {{ form.as_p }}-->
+        {{ form.as_p}}
+        <!--a Save button-->
+        <button type="submit" class="save btn bun-default">Save</button>
+    </form>
+{% endblock %}
